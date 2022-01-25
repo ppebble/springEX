@@ -1,0 +1,53 @@
+package com.example.spring01.model.board.dao;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
+import org.apache.ibatis.session.SqlSession;
+
+import org.springframework.stereotype.Repository;
+
+import com.example.spring01.model.border.dto.BoardVO;
+
+@Repository
+public class BoardDAOImpl implements BoardDAO {
+	@Inject
+	SqlSession SqlSession;
+	@Override
+	public void create(BoardVO vo) throws Exception {
+		SqlSession.insert("board.insert", vo);
+
+	}
+
+	@Override
+	public BoardVO read(int bno) throws Exception {
+		
+		return SqlSession.selectOne("board.view", bno);
+	}
+
+	@Override
+	public void update(BoardVO vo) throws Exception {
+		SqlSession.update("board.updateArticle",vo);
+
+	}
+
+	@Override
+	public void delete(int bno) throws Exception {
+		SqlSession.delete("board.deleteArticle",bno);
+
+	}
+
+	@Override
+	public List<BoardVO> listAll() throws Exception {
+		
+		return SqlSession.selectList("board.listAll");
+	}
+
+	@Override
+	public void increaseViewcnt(int bno, HttpSession session) throws Exception {
+		SqlSession.update("board.increaseViewcnt", bno);
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.example.spring01.model.member.dto;
+
+import java.sql.Date;
+
+public class MemberVO {
+	private String userId;
+	private String userPw;
+	private String userName;
+	private String userEmail;
+	private Date userRegdate;
+	private Date userUpdatedate;
+	
+
+}

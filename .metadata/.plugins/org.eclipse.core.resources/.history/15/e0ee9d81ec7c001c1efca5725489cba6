@@ -1,0 +1,53 @@
+package com.example.spring01.model.border.dao;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
+import org.apache.ibatis.session.SqlSession;
+
+import org.springframework.stereotype.Repository;
+
+import com.example.spring01.model.border.dto.BoardVO;
+
+@Repository
+public class BoardDAOImpl implements BoardDAO {
+	@Inject
+	SqlSession SqlSession;
+	@Override
+	public void create(BoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public BoardVO read(int bno) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(BoardVO vo) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delete(int bno) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<BoardVO> listAll() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void increaseViewcnt(int bno, HttpSession session) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+}

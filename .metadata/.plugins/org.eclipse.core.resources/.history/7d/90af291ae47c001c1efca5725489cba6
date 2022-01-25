@@ -1,0 +1,8 @@
+package com.example.spring01.controller.member;
+
+public interface MemberService {
+	public boolean loginCheck(MemberVO vo, HttpSession session);
+	public MemberVO viewMember(MemberVO vo);
+	public void logout(HttpSession session);
+
+}
