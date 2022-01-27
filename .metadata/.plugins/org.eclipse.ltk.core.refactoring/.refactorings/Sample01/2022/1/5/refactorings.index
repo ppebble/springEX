@@ -6,3 +6,16 @@
 1643015073693	Rename package 'com.example.spring01.model.border.dao'
 1643015079337	Rename package 'com.example.spring01.model.border.dto'
 1643018275163	Move 'list.jsp' to 'board'
+1643159356522	Rename package 'com.example.spring01.controller.member'
+1643159364445	Rename package 'com.example.spring01.controller.board'
+1643159399456	Rename package 'com.example.spring01.model.board.dao'
+1643159409847	Rename package 'com.example.spring01.model.board.dto'
+1643159423639	Rename package 'com.example.spring01.model.member.dao'
+1643159433653	Rename package 'com.example.spring01.model.member.dto'
+1643160382698	Copy file
+1643160474732	Copy file
+1643160631150	Copy file
+1643165030801	Move 'member_list.jsp' to 'member'
+1643170322832	Copy file
+1643184411310	Move 'login.jsp' to 'member'
+1643186556818	Move 'sessionCheck.jsp' to 'include'

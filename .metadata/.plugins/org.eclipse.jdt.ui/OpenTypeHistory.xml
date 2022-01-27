@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=Sample01/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.spring01.model.member.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1643008076133"/>
-<typeInfo handle="=Sample01/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.spring01.controller.board{BoardService.java[BoardService" modifiers="513" timestamp="1643094575932"/>
+<typeInfo handle="=Sample01/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.spring01.member.controller{MemberService.java[MemberService" modifiers="513" timestamp="1643159956293"/>
 </typeInfoHistroy>

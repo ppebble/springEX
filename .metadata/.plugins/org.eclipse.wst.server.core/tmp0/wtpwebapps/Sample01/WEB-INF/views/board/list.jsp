@@ -12,6 +12,11 @@
             location.href = "${path}/board/write.do";
         });
     });
+    $(document).ready(function(){
+    	$("#btnSearch").click(function(){
+    		document.form1.submit();
+    	})
+    })
 </script>
 </head>
 <body>
@@ -26,8 +31,10 @@
             <option value="title" <c:out value="${map.searchOption == 'title'?'selected':''}"/> >제목</option>
         </select>
         <input name="keyword" value="${map.keyword}">
-        <input type="submit" value="조회">
+        <button type="button" id="btnSearch">조회</button>
+       <c:if test="${sessionScope.userId != null}">
         <button type="button" id="btnWrite">글쓰기</button>
+       </c:if>
     </form>
     <!-- 레코드의 갯수를 출력 -->
     ${map.count}개의 게시물이 있습니다.
@@ -42,7 +49,7 @@
         <tr>
             <td>${row.bno}</td>
             <td><a href="${path}/board/view.do?bno=${row.bno}">${row.title}</a></td>
-            <td>${row.writer}</td>
+            <td>${row.userName}</td>
             <td>
                 <!-- 원하는 날짜형식으로 출력하기 위해 fmt태그 사용 -->
                 <fmt:formatDate value="${row.regdate}" pattern="yyyy-MM-dd HH:mm:ss"/>

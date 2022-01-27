@@ -22,16 +22,28 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping("/")
+	public String main(Model model) {
+		//model :: 데이터를 담는 공간(map구조)
+		//model.addAttribute("변수명", 값);
+		model.addAttribute("msg", "홈페이지 방문을 환영합니다");
+		return "main";
+	}
+	
+	//url mapping
+	@RequestMapping(value="home.do", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		logger.info("Welcome home! Client Locale is {}.", locale);
 		
 		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		DateFormat dateFormat = DateFormat.getDateTimeInstance();
 		
 		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("serverTime", formattedDate);
+		//home.jsp로 포워딩
+		//servlet-context.xml :: 
+		//<beans:property name = "prefix" value = "/WEB-INF/views/" />
+		//  	"		suffix = ".jsp"
 		
 		return "home";
 	}
