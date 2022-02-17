@@ -1,8 +1,0 @@
-package com.example.spring01.model.member.dao;
-
-public interface MemberDAO {
-	public boolean loginCheck(MemberVO vo);
-	public MemberVO viewMember(MemberVo vo);
-	public void logout(HttpSession session);
-
-}

@@ -1,5 +1,0 @@
-package com.example.spring01.model.member.dao;
-
-public interface MemberDAO {
-
-}

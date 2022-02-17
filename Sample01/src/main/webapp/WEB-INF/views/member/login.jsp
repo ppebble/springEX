@@ -39,7 +39,7 @@
 			</tr>
 			<tr>
 				<td>PW ::</td>
-				<td><input name="userPw" id="userPw"></td>
+				<td><input type = "password" name="userPw" id="userPw"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="center">

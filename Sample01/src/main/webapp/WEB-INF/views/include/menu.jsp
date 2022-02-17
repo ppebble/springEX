@@ -2,6 +2,7 @@
 <!-- jstl 코어 태그 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <a href="${path}">메인으로</a> |
+<a href="${path}/board/list.do">게시판으로</a>
 
 
 <!-- 관리자 권한일 경우 -->

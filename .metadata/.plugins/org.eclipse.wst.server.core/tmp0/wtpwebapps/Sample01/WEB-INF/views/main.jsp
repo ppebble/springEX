@@ -5,10 +5,8 @@
 <%@ include file="include/member_header.jsp" %>
 </head>
 <body>
-<%@ include file="include/member_menu.jsp" %>
-	<c:if test="${msg == 'success'}">
-	<h2>${sessionScope.userName}(${sessionScope.userId})님 환영합니다.</h2>
-	</c:if>
+<%@ include file="include/main_menu.jsp" %>
+	<h2 style="text-align:center; margin-top:150px">${sessionScope.userName}(${sessionScope.userId})님 환영합니다.</h2>
 	${result}
 </body>
 </html>

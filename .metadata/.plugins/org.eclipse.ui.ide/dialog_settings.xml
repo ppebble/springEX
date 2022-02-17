@@ -103,9 +103,8 @@
 		<item value="org.springsource.sts:3.9.15.202012140755-RELEASE"/>
 	</list>
 	<section name="NewWizardAction">
-		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.springsource.sts.wizard.template"/>
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.springsource.ide.eclipse.commons.gettingstarted.wizard.boot.NewSpringBootWizard"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
 			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>

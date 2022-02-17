@@ -20,7 +20,7 @@ public interface BoardDAO {
 	
 	public void increaseViewcnt(int bno) throws Exception;
 
-	public List<BoardVO> listAll(String searchOption, String keyword);
+	public List<BoardVO> listAll(int start, int end, String searchOption, String keyword);
 
 	public int countArticle(String searchOption, String keyword);
 

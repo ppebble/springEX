@@ -7,6 +7,9 @@
 <%@ include file="../include/header.jsp" %>
 <script>
     $(document).ready(function(){
+    	$("#btnList").click(function(){
+            location.href="${path}/board/list.do?curPage=${curPage}&searchOption=${searchOption}&keyword=${keyword}";
+        });
         $("#btnDelete").click(function(){
             if(confirm("삭제하시겠습니까?")){
                 document.form1.action = "${path}/board/delete.do";
@@ -36,9 +39,12 @@
                 document.form1.writer.focus();
                 return;
             } */
-            document.form1.action="${path}/board/update.do"
-            // 폼에 입력한 데이터를 서버로 전송
-            document.form1.submit();
+            if(confirm("수정하시겠습니까?")){
+            	document.form1.action="${path}/board/update.do"
+                    // 폼에 입력한 데이터를 서버로 전송
+                document.form1.submit();
+            }
+            
         });
     });
 </script>
@@ -54,16 +60,16 @@
     
     <div>
         제목
-        <input name="title" id="title" size="80" value="${dto.title}" placeholder="제목을 입력해주세요">
+       <input name="title" id="title" size="80" value="${dto.title}" placeholder="제목을 입력해주세요">
     </div>
     <div>
         내용
-        <textarea name="content" id="content" rows="4" cols="80" placeholder="내용을 입력해주세요">${dto.content}</textarea>
+       <textarea name="content" id="content" rows="4" cols="80" placeholder="내용을 입력해주세요">${dto.content}</textarea>
     </div>
     <div>
         작성자
-        <input name="writer" id="writer" value="${dto.writer}" placeholder="이름을 입력해주세요">
-        ${dto.userName}
+        <input name="userName" id="userName" value="${dto.writer}" placeholder="이름을 입력해주세요" readonly="readonly">
+        ${map.list}
     </div>
     <div style="width:650px; text-align: center;">
         <!-- 게시물번호를 hidden으로 처리 -->
@@ -72,6 +78,7 @@
         <button type="button" id="btnUpdete">수정</button>
         <button type="button" id="btnDelete">삭제</button>
     </c:if>
+    	<button type="button" id="btnList">목록</button>
     </div>
 </form>
 </body>

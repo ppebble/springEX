@@ -18,7 +18,7 @@ public interface BoardService {
 	
 	public List<BoardVO> listAll() throws Exception;
 	
-	public List<BoardVO> listAll(String searchOption, String keyword) throws Exception;
+	public List<BoardVO> listAll(int start, int end, String searchOption, String keyword) throws Exception;
 		
 	public int countArticle(String searchOption, String keyword);
 
